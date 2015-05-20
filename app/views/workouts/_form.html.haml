@@ -1,0 +1,20 @@
+= simple_form_for @workout, html: { multipart: true } do |f|
+	- if @workout.errors.any?
+		#errors
+		%p
+			= @workout.errors.count
+			Prevented this workout from saving
+		%ul
+			-@workout.errors.full_messages.each do |msg|
+				%li= msg
+
+	.panel-body
+		= f.input :date, 		label: "Date"
+		= f.input :title,  	input_html: 	{ class: 'form-control'}
+		= f.input :mood, 	 	input_html:  	{ class: 'form-control'}
+		= f.input :length, 	input_html: 	{ class: 'form-control'}
+
+		= f.button :submit
+
+		.row
+			.col-md-6
