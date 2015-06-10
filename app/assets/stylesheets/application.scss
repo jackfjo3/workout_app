@@ -10,7 +10,9 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
-
+li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;}
 
 /* for bootstrap */
 @import "bootstrap-sprockets";
